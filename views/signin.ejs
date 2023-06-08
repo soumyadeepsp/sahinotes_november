@@ -7,6 +7,13 @@
     <body>
         <%-include('_header')%>
         <h1>Signin Page</h1>
+        <form action="/users/auth/create-session" method="POST">
+            <label for="email">Your email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="password">Your password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" value="Signin">
+        </form>
         <%-include('_footer')%>
         <script type="text/javascript" src="../assets/js/signin.js"></script>
     </body>
