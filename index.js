@@ -10,6 +10,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/', require('./routes/home'));
+app.use(express.static('./assets'));
 
 app.listen(port, function(err) {
     if (err) {

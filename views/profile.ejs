@@ -2,17 +2,15 @@
 <html>
     <head>
         <title>Profile Page | Sahinotes</title>
-        <link rel="stylesheet" type="text/css" href="../assets/css/profile.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/profile.css"/>
     </head>
     <body>
         <%-include('_header')%>
-
+        <!-- <p id="user_id" style="display: none;"><%=locals.user_id%></p> -->
         <h1>Welcome Coding Ninjas</h1>
         <button id="logout">Logout</button>
+        <button id="mobile_verify">Mobile Verify</button>
         <%-include('_footer')%>
-        <script>
-            var user_id = <%= user_id %>            
-        </script>
-        <script type="text/javascript" src="../assets/js/profile.js"></script>
+        <script type="text/javascript" src="/js/profile.js"></script>
     </body>
 </html>

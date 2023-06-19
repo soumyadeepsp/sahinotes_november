@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Verify mobile Page | Sahinotes</title>
+        <link rel="stylesheet" type="text/css" href="/css/mobile_verify.css"/>
+    </head>
+    <body>
+        <%-include('_header')%>
+        <h1>Verify Mobile Page</h1>
+        <form>
+            <label for="mobile_number">Your mobile number:</label><br>
+            <input type="number" id="mobile_number" name="mobile_number"><br>
+            <button id="sendOtp">Send OTP</button>
+        </form>
+        <form>
+            <label for="otp">Your otp:</label><br>
+            <input type="number" id="otp" name="otp"><br>
+            <button>Verify</button>
+        </form>
+        <%-include('_footer')%>
+        <script type="text/javascript" src="/js/mobile_verify.js"></script>
+    </body>
+</html>

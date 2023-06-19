@@ -1,19 +1,17 @@
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb://localhost/sahinotes2_development";
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
-async function run() {
+const mongoose = require('mongoose');
+
+const url = 'mongodb://localhost/sahinotes';
+
+async function connectToMongoDB() {
   try {
-    await client.connect();
-    // await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // await client.close();
+    await mongoose.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Connected to MongoDB!');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
   }
 }
-run().catch(console.dir);
+
+connectToMongoDB();
